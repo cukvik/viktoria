@@ -57,7 +57,14 @@
           </nav>	         
         </div>      
       </header>  
-                       
+            
+	<div class="containter">
+		<img src="http://www.w3schools.com/css/img_fjords.jpg" style="width:100%; padding:8px;" id="imgExpander"/>
+		<br />
+		<img src="http://www.w3schools.com/css/img_forest.jpg" style="width:50%; height:50%;" onclick="changeImage(this)"/>
+		<img src="http://www.w3schools.com/css/img_lights.jpg" style="width:50%; height:50%;" onclick="changeImage(this)"/>
+	    </div>
+	    
       <footer id="footer">	                                             
         <p class="navFooter hidden-sm hidden-xs">Dúfame, že Vám naše čerstvé zákusky, koláče i zmrzlina budú chutiť. Tešíme sa na Vašu návštevu. 			                                               
         </p>                                         
@@ -180,6 +187,9 @@
 			})
 		});
 		//]]>
+	function changeImage(img) {
+       document.getElementById("imgExpander").src = img.src; 
+    }
 	</script>                   
   </body>           
 </html>
