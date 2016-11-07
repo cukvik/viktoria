@@ -2,6 +2,13 @@
   height: 105px;
 }
 
+#cakes {
+  border:1px solid #ddd; 
+  padding:5px; 
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
 .mobileLogo {
   display: block;
   padding: 0;
