@@ -2,11 +2,46 @@
   height: 105px;
 }
 
-#cakes {
+.marginsCont {
+  padding: 20px 40px 0 40px;
+}
+
+.cakes {
   border:1px solid #ddd; 
   padding:5px; 
   text-align: center; 
   margin-bottom: 20px;
+}
+
+.img-list img {
+  width: 145px;
+  height: 145px;
+}
+
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: 165px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 145px;
+}
+
+div.picture:hover {
+  background: rgba(0,0,0,0.1);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.cakeThumb, .cakeThumbMobile {
+  display: inline-block !important;
+  float: none !important;
 }
 
 .mobileLogo {
@@ -49,18 +84,18 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #B6B6B6;
-    color: #FFFFFF;
-    border:0;
-    text-transform: uppercase;
-    font-size:20px;
-    font-weight: normal;
-    letter-spacing: .05em;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -khtml-border-radius: 0px;
-    border-radius: 0px;
-    padding:5px 20px;
+  background-color: #B6B6B6;
+  color: #FFFFFF;
+  border:0;
+  text-transform: uppercase;
+  font-size:20px;
+  font-weight: normal;
+  letter-spacing: .05em;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  padding:5px 20px;
 }
 
 .btn-primary:hover {
@@ -101,8 +136,25 @@ header {
     border-bottom: 1px solid #E0E0E0;
 }
 
-.text-content {
-    padding: 20px 40px 0 40px;
+span.text-content {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer;
+    display: table;
+    height: 145px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 145px;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+ul.img-list li:hover span.text-content {
+  opacity: 0.3;
 }
 
 #logo img {
