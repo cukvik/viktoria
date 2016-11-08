@@ -21,7 +21,16 @@
 <script type="text/javascript">
 	head.js("../ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "bootstrap.min.js");     
 </script>         
-<script src="index.html" type="text/javascript"></script>                   
+<script src="index.html" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+$('a.picture').click( function() {
+   alert($('img', this).attr('src')); 
+});
+
+});//]]> 
+
+</script>                 
   </head>              
   <body>	       	        	                   
     <div id="outerWrapper">		       
@@ -62,22 +71,37 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1 style="text-align: center;">Naša ponuka zákuskov</h1>
-          <img src="img/zakusky/Berry_Patch_Cake_350_350.png" style="width:50%; display:block; margin-left:auto; margin-right:auto;" id="imgExpander"/>
+          <img src="img/zakusky/Berry_Patch_Cake_350_350.png" style="max-height:500px; display:block; margin-left:auto; margin-right:auto;" id="imgExpander"/>
 		<br />
-    <div id="cakes">
-		<img src="img/zakusky/Berry_Patch_Cake_350_350.png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-		<img src="img/zakusky/BlueCake.jpg" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-    <img src="img/zakusky/Coconut_Cream_Cake_350_350.jpg" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-    <img src="img/zakusky/Elsa_FINAL_2.png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-    <img src="img/zakusky/flower_cake.png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-		<img src="img/zakusky/GermanChocolate_381_350_s.png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-    <img src="img/zakusky/gold_cake.png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-    <img src="img/zakusky/gwen.png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>
-    <img src="img/zakusky/IMG_1701_350px_(2).png" style="width:16.2%; padding:8px;" onclick="changeImage(this)"/>    
+    <div class="cakes">
+      
+        <a class="picture">
+            <img src="img/zakusky/Berry_Patch_Cake_350_350.png" />
+            
+        </a>
+        <a class="picture">
+            <img src="img/zakusky/BlueCake.jpg" />
+            <span class="text-content"><span>Blue Cake</span></span>
+        </a>
+        <a class="picture">
+            <img src="img/zakusky/Coconut_Cream_Cake_350_350.jpg" />
+            <span class="text-content"><span>Coconut Cream Cake</span></span>
+        </a>
+        
+        <!--
+    		<img src="img/zakusky/BlueCake.jpg" onclick="changeImage(this)"/>
+        <img src="img/zakusky/Coconut_Cream_Cake_350_350.jpg" onclick="changeImage(this)"/>
+        <img src="img/zakusky/Elsa_FINAL_2.png" onclick="changeImage(this)"/>
+        <img src="img/zakusky/flower_cake.png" onclick="changeImage(this)"/>
+    		<img src="img/zakusky/GermanChocolate_381_350_s.png" onclick="changeImage(this)"/>
+        <img src="img/zakusky/gold_cake.png" onclick="changeImage(this)"/>
+        <img src="img/zakusky/IMG_1701_350px_(2).png" onclick="changeImage(this)"/>     -->
+        
+        </div>
     </div>
 				</div>
 			</div>
-      </div>         
+              
 	    
       <footer id="footer">	                                             
         <p class="navFooter hidden-sm hidden-xs">Dúfame, že Vám naše čerstvé zákusky, koláče i zmrzlina budú chutiť. Tešíme sa na Vašu návštevu. 			                                               
@@ -199,11 +223,12 @@
 			$('.carousel').carousel({
 			  interval: 5000
 			})
+      $('a.picture').click( function() {
+        alert($('img', this).attr('src'));
 		});
+    });
 		//]]>
-	function changeImage(img) {
-       document.getElementById("imgExpander").src = img.src; 
-    }
-	</script>                   
+	
+	</script>                
   </body>           
 </html>
