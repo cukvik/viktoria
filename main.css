@@ -2685,5 +2685,29 @@ html.blog-page .about-us--content .blog-list--content .blog-elem:hover a.bread-m
 	}
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+/* Safari only override  */
+::i-block-chrome,.navbar-nav > li > a {
+ 	padding:0 19px;
+  }
+}
+  
+/*  
+::i-block-chrome,body p {
+  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+  }
+  
+::i-block-chrome,h2 {
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  }
+  
+::i-block-chrome,.navFooter  {
+  font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+  }
 
+
+    */
 
