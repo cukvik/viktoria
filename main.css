@@ -14,9 +14,20 @@
   margin-bottom: 20px;
 }
 
-.img-list img {
+.events {
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cakes .img-list img {
   width: 145px;
   height: 145px;
+}
+
+.events .img-list img {
+  width: 230px;
+  height: 230px;
 }
 
 ul.img-list {
@@ -26,12 +37,18 @@ ul.img-list {
   text-align: center;
 }
 
-ul.img-list li {
+.cakes ul.img-list li {
   display: inline-block;
   height: 165px;
   margin: 0 1em 1em 0;
   position: relative;
   width: 145px;
+}
+
+.events ul.img-list li {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    position: relative;
 }
 
 div.picture:hover {
