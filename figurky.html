@@ -55,8 +55,7 @@
             </div>		           
           </nav>	         
         </div>      
-      </header> 
-          </div>               	                                                  
+      </header>             	                                                  
                             
       <footer id="footer">	                                             
         <p class="navFooter hidden-sm hidden-xs">Dúfame, že Vám naše čerstvé zákusky, koláče i zmrzlina budú chutiť. Tešíme sa na Vašu návštevu. 			                                               
@@ -76,108 +75,20 @@
         </div>	 	                                             
         <br>                                  
       </footer>
-<script type="text/javascript">
-	head.js("jquery.bootstrap.validate.js");
-	
-	head.ready(function() {
-		$('#mailForm').validate({submitHandler: function(form){
-			//e.preventDefault();
-			$.ajax({
-				url: $(form).attr('action'),
-				data: $(form).serialize(),
-				type: 'post',
-				dataType: 'json'
-			}).done(function(data) {
-				if(data.errors === undefined) {
-					$('#mailingListTabs a:last').tab('show');
-				}
-			});
-		//console.log(form);
-		//console.log(e);
-		}});
-		$('#mailSubmit').on('click', function(e) {
-			e.preventDefault();
-			$(this).closest('form').submit();
-		});
-		$('#joinMailingList').on('hidden.bs.modal', function(e) {
-			$('input[type!="hidden"]', '#joinMailingList').val('');
-			$('#mailingListTabs a:first').tab('show')
-		});
-	});
-</script>                                  
-      <!-- Modal -->                                      
-      <div class="modal fade" id="joinMailingList" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">	                                             
-        <div class="modal-dialog">		                                                       
-          <div class="modal-content">			                                                                 
-            <ul class="nav nav-tabs hide" id="mailingListTabs">  				                                                                           
-              <li class="active">                                                                                    
-                <a href="#" data-toggle="tab" data-target="#mailingListFormTab">form</a>                                                                          
-              </li>  				                                                                           
-              <li>                                                                          
-              <a href="#" data-toggle="tab" data-target="#mailingListThankTab">thankyou</a>                                                                          
-              </li>			                                                                 
-            </ul>			                                                                 
-            <div class="tab-content">				                                                                           
-              <div class="tab-pane fade in active" id="mailingListFormTab">					                                                                                     
-                <form role="form" id="mailForm" action="http://lilacpatisserie.com/_global/_mailchimp" method="POST">						                                                                                               
-                  <input type="hidden" name="onichimp" value="onichimp">						                                                                                               
-                  <div class="modal-header">							                                                                                                         
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;                                                                                                         
-                    </button>							                                                                                                         
-                    <h4 class="modal-title" id="myModalLabel">Join Mailing List</h4>						                                                                                               
-                  </div>						                                                                                               
-                  <div class="modal-body">						 							 							                                                                                                         
-                    <div class="form-group">								                                                                                                                   
-                      <label for="mail_EMAIL">Email Address                                                                                                                   
-                      </label>								                                                                                                                   
-                      <input type="email" class="form-control required" id="mail_EMAIL" name="onichimp_EMAIL" placeholder="Enter Email Address">							                                                                                                         
-                    </div>							 							                                                                                                         
-                    <div class="form-group">								                                                                                                                   
-                      <label for="mail_FNAME">First Name                                                                                                                   
-                      </label>								                                                                                                                   
-                      <input type="text" class="form-control " id="mail_FNAME" name="onichimp_FNAME" placeholder="Enter First Name">							                                                                                                         
-                    </div>							 							                                                                                                         
-                    <div class="form-group">								                                                                                                                   
-                      <label for="mail_LNAME">Last Name                                                                                                                   
-                      </label>								                                                                                                                   
-                      <input type="text" class="form-control " id="mail_LNAME" name="onichimp_LNAME" placeholder="Enter Last Name">							                                                                                                         
-                    </div>							 						 						                                                                                               
-                  </div>						                                                                                               
-                  <div class="modal-footer">							 							                                                                                                         
-                    <button type="button" class="btn btn-primary" id="mailSubmit">Submit                                                                                                         
-                    </button>						                                                                                               
-                  </div>					                                                                                     
-                </form>				                                                                           
-              </div>				                                                                           
-              <div class="tab-pane fade" id="mailingListThankTab">					                                                                                     
-                <div class="modal-header">						 						 					                                                                                     
-                </div>					                                                                                     
-                <div class="modal-body">						                                                                                               
-                  <h2 style="text-align:center;">Thank you for joining the Lilac P&acirc;tisserie Mailing List!</h2>					                                                                                     
-                </div>					                                                                                     
-                <div class="modal-footer">						                                                                                               
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close                                                                                               
-                  </button>					                                                                                     
-                </div>				                                                                           
-              </div>			                                                                 
-            </div>		                                                       
-          </div>                                                      
-          <!-- /.modal-content -->    	                                             
-        </div>                                            
-        <!-- /.modal-dialog -->                                      
-      </div>                                  
-      <!-- /.modal -->    		                                   
-      <div class="clear">                                  
-      </div>                                      
-      <!-- end outerWrapper -->    	                              
+    </div>                    
+    <!-- end outerWrapper -->   	                               
 <script type="text/javascript">
 		//<![CDATA[
 		head.ready(function() {
 			$('.carousel').carousel({
 			  interval: 5000
 			})
+      $('div.picture').click( function() { 
+        var imageSRC = $('img', this).attr('src'); 
+        $("#imgExpander").attr('src', imageSRC);
 		});
-		//]]>
-	</script>                   
-  </body>           
+    });
+		//]]>	
+	</script>                    
+  </body>            
 </html>

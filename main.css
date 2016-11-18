@@ -3,16 +3,11 @@
 }
 
 .footerLinkFB {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  background-image: url('img/global/socials.png');
+  background: #666666;
 }
 
 .footerLinkFB:hover {
-  background-image: url('img/global/socials_active.png');
+  background: #3b5998;
 }
 
 .marginsCont {
