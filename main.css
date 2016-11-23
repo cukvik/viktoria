@@ -2,6 +2,10 @@
   height: 105px;
 }
 
+.navbarMobile {
+  display: none;
+}
+
 .footerLinkFB {
   background: #666666;
 }
@@ -405,29 +409,59 @@ a.siteBy {
 
 }
 
-
 @media (max-width: 991px) {
 	.greyBGTitle {
 		width:100%;
 		background-color:#b6b6b6;
 	}
+  .navbar {
+    display: none;
+  }
+  
+  .navbarMobile {
+    display: inherit;
+  }
+  
+  .mobileIcon img{
+    background: #9B7E69;
+  }
+  
+  .mobileIcon:hover img{
+    background: black;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+  }
   
   .navbar-nav > li {
   	float:none;
   	text-align: center;
     margin-bottom: 10px;
-    border-bottom: 1px solid #E0E0E0;
-    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   #logo img {
-    max-width: 100px; 
-    margin-top: -5px;
+    display: block;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-bottom: 12px;
   }
 
 	#searchform {display:none !important;}
 
 	.socBox {margin-bottom:0;}
+}
+
+@media (max-width: 541px) {
+  .mobileIcon img {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (max-width: 991px) {
