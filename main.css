@@ -2,6 +2,10 @@
   height: 105px;
 }
 
+.listBreak {
+  display: none;
+}
+
 .navbarMobile {
   display: none;
 }
@@ -459,8 +463,12 @@ a.siteBy {
 
 @media (max-width: 541px) {
   .mobileIcon img {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
+  }
+  
+  .listBreak {
+    display: inherit;
   }
 }
 
