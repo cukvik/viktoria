@@ -2864,7 +2864,8 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 	position:relative;
 	z-index:1000;
 	min-height:50px;
-	margin-bottom:20px;
+  margin-top:10px;
+	margin-bottom:15px;
 	border:1px solid transparent
 }
 .navbar:before,.navbar:after {
