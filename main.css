@@ -22,12 +22,18 @@
 }
 
 .justifyPara {
-  font-size:20px;
+  font-size: 20px;
   text-align: justify;
 }
 
+.centerPara {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -10px;
+}
+
 .marginsVert {
-  margin:20px 0 10px;
+  margin: 20px 0 10px;
 }
 
 .introTextBig {
@@ -48,7 +54,7 @@
   text-align: center;
   width: 165px;
   z-index: 15;
-  left:auto;
+  left: auto;
 }
 
 .carousel-indicators .active {
@@ -67,7 +73,7 @@
   margin: 3px;
   text-indent: -999px;
   width: 10px;
-  float:right;
+  float: right;
 }
 
 .admatLinkWrapper {
@@ -449,9 +455,14 @@ a.siteBy {
     font-size: 26px;
   }
   
+  .centerPara {
+    font-size: 15px;
+    text-align: center;
+  }
+  
 	.greyBGTitle {
-		width:100%;
-		background-color:#b6b6b6;
+		width: 100%;
+		background-color: #b6b6b6;
 	}
   .navbar {
     display: none;
@@ -509,15 +520,16 @@ a.siteBy {
 	.navFooter {
 		padding-bottom:5px;
 		padding-left:0;
+    font-size: 15px;
 	}
 	.navFooter li {margin-bottom:5px;}
 
 	.mobileNav {
 		display: block;
-		width:100%;
-		padding:10px 0;
+		width: 100%;
+		padding: 10px 0;
 		border-bottom: 2px solid #E0E0E0;
-		color:#E0E0E0;
+		color: #E0E0E0;
 	}
 }
 
