@@ -362,7 +362,7 @@ span.tagline {
 	color:#9B7E69;
   font-weight: 600;
 	line-height: inherit;
-	font-size:22px;
+	font-size: 1.3em;
   letter-spacing: .19em;
 }
 
@@ -444,7 +444,7 @@ a.siteBy {
 		right:0;
 	}
   .navbar-nav > li > a {
-    padding: 0 20px;
+    padding: 0 18px;
     letter-spacing: 0.1em;
   }
 }
