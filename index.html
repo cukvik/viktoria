@@ -17,7 +17,16 @@
     <script type="text/javascript" src="head.min.js"></script>             
     <script type="text/javascript">
 	     head.js("ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "bootstrap.min.js");    
-    </script>                      
+    </script>
+    <script type="text/javascript">
+  		//<![CDATA[
+  		head.ready(function() {
+  			$('.carousel').carousel({
+  			  interval: 5000
+  			})
+  		});
+  		//]]>
+	  </script>                       
   </head>
              
   <body>	       	        	              
@@ -103,7 +112,7 @@
               <div class="carousel-inner">								 									                                                                    
                 <div class="active item">										                                                                            
                   <div class='inner-item'>												                     											                                                                                    
-                    <img src="img/global/logo-viktoria.png" class="img-responsive" alt="Cukráreň Viktória" />												 										                                                                            
+                    <img src="img/global/logo-viktoria.png" class="img-responsive" alt="Cukráreň Viktória">												 										                                                                            
                   </div>									                                                                    
                 </div>								 									                                                                    
                 <div class="item">										                                                                            
@@ -111,7 +120,7 @@
                     <div class="admatLinkWrapper">												                                                                                            
                       <a href="zakusky.html"></a>																							                                                                                    
                     </div>												                                                                                    
-                    <img src="img/global/slider-image-1.png" class="img-responsive" alt="Orechový zákusok" />												 										                                                                            
+                    <img src="img/global/slider-image-1.png" class="img-responsive" alt="Orechový zákusok">												 										                                                                            
                   </div>									                                                                    
                 </div>								 									                                                                    
                 <div class="item">										                                                                            
@@ -119,7 +128,7 @@
                     <div class="admatLinkWrapper">												                                                                                            
                       <a href="torty.html"></a>																							                                                                                    
                     </div>												                                                                                    
-                    <img src="img/global/slider-image-2.png" class="img-responsive" alt="Malinovo-čokoládová torta" />												 										                                                                            
+                    <img src="img/global/slider-image-2.png" class="img-responsive" alt="Malinovo-čokoládová torta">												 										                                                                            
                   </div>									                                                                    
                 </div>								 									                                                                    
                 <div class="item">										                                                                            
@@ -127,7 +136,7 @@
                     <div class="admatLinkWrapper">												                                                                                            
                       <a href="zakusky.html"></a>																							                                                                                    
                     </div>												                                                                                    
-                    <img src="img/global/slider-image-3.png" class="img-responsive" alt="Karamelový veterník" />												 										                                                                            
+                    <img src="img/global/slider-image-3.png" class="img-responsive" alt="Karamelový veterník">												 										                                                                            
                   </div>									                                                                    
                 </div>	                                                   
                 <div class="item">										                                                                            
@@ -135,7 +144,7 @@
                     <div class="admatLinkWrapper">												                                                                                            
                       <a href="torty.html"></a>																							                                                                                    
                     </div>												                                                                                    
-                    <img src="img/global/slider-image-4.png" class="img-responsive" alt="Belgická čokoládová torta" />												 										                                                                            
+                    <img src="img/global/slider-image-4.png" class="img-responsive" alt="Belgická čokoládová torta">												 										                                                                            
                   </div>									                                                                    
                 </div>							 									                 								 							                                                            
               </div>							                                                             
@@ -193,7 +202,7 @@
                   </tr> 
                   <tr>
                     <td>Nedeľa:</td>
-                    <td>10:00 - 19:00 </td>
+                    <td>10:00 - 19:00</td>
                   </tr> 
                 </tbody>
               </table>                                                        						                                                    
@@ -211,7 +220,8 @@
       </div>		 
                                                    
       <footer id="footer">	                                    
-        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom. Záväznosť nastáva po prijatí zálohy.</p>
+        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom.
+        <br class="listBreak" /> Záväznosť nastáva po prijatí zálohy.</p>
                                         
         <div class="text-center footLineHeight">          
           <strong>Cukráreň Viktória</strong>            
@@ -235,17 +245,6 @@
       </footer>
     
     </div>                    
-    <!-- end outerWrapper -->  
-     	                               
-    <script type="text/javascript">
-		//<![CDATA[
-		head.ready(function() {
-			$('.carousel').carousel({
-			  interval: 5000
-			})
-		});
-		//]]>
-	</script>  
-                    
+    <!-- end outerWrapper -->            
   </body>            
 </html>

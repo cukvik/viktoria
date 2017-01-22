@@ -17,7 +17,16 @@
     <script type="text/javascript" src="head.min.js"></script>             
     <script type="text/javascript">
 	     head.js("ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "bootstrap.min.js");    
-    </script>                      
+    </script>
+    <script type="text/javascript">
+  		//<![CDATA[
+  		head.ready(function() {
+  			$('.carousel').carousel({
+  			  interval: 5000
+  			})
+  		});
+  		//]]>
+	  </script>                       
   </head>
              
   <body>	       	        	              
@@ -114,7 +123,7 @@
           </div>
           				
           <div class="col-md-4">					
-            <img src="img/global/originalBear.png" class="aboutImage" height="304px" width="auto" alt="Cukráreň Viktória" />					
+            <img src="img/global/originalBear.png" class="aboutImage" height="304px" width="auto" alt="Cukráreň Viktória">					
             
             <br />  
               					
@@ -140,7 +149,7 @@
                 <p>Facebook: 
                   <a href="http://facebook.com/cukrarenviktoria" alt="Facebook | Cukráreň Viktória">Cukráreň Viktória</a>            
                   <br />E-mail: 
-                  <a href="mailto:viktoriacukraren@gmail.com" target="_blank">viktoriacukraren@gmail.com</a>            
+                  <a href="mailto:viktoriacukraren@gmail.com" target="_blank">viktoriacukraren@gmail.com</a>             
                   <br />Telefón 1: +421 903 900 657             
                   <br />Telefón 2: +421 903 790 444              
                 </p> 						 						             
@@ -157,7 +166,8 @@
       </div>   
                                 
       <footer id="footer">	                                    
-        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom. Záväznosť nastáva po prijatí zálohy.</p>
+        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom.
+        <br class="listBreak" /> Záväznosť nastáva po prijatí zálohy.</p>
                                              
         <div class="text-center footLineHeight">          
           <strong>Cukráreň Viktória</strong>            
@@ -181,18 +191,7 @@
       </footer>
     
     </div>                    
-    <!-- end outerWrapper -->  
-     	                               
-    <script type="text/javascript">
-		//<![CDATA[
-		head.ready(function() {
-			$('.carousel').carousel({
-			  interval: 5000
-			})
-		});
-		//]]>
-	</script>  
-                    
+    <!-- end outerWrapper -->           
   </body>            
 </html>
 

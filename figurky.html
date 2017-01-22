@@ -17,7 +17,26 @@
     <script type="text/javascript" src="head.min.js"></script>             
     <script type="text/javascript">
 	     head.js("ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "bootstrap.min.js");    
-    </script>                      
+    </script>
+    <script type="text/javascript">
+  		//<![CDATA[
+  		head.ready(function() {
+  			$('.carousel').carousel({
+  			  interval: 5000
+  			})
+        $('div.picture').click( function() { 
+          var imageSRC = $('img', this).attr('src'); 
+          $("#imgExpander").attr('src', imageSRC);
+  		  })
+        $('.scrollup').click(function () {
+          $("html, body").animate({
+              scrollTop: 0
+          }, 700);
+          return false;
+        })
+      });
+  		//]]>	
+	  </script>                        
   </head>
              
   <body>	       	        	              
@@ -95,7 +114,7 @@
       </header> 
       
       <div class="row admatBottom">        
-        <img src="img/figurky/figurky_pes.png" style="max-width:100%; display:block; margin:0 auto;" id="imgExpander" alt="Pes"/>	
+        <img src="img/figurky/figurky_ruze.png" width="400px" height="400px" id="imgExpander" alt="Ruže">	
       </div>
       
       <div class="container marginsCont">	
@@ -109,26 +128,10 @@
         <div class="col-md-12">	
           <div class="row">               
             <div class="cakes">      
-              <ul class="img-list">        
+              <ul class="img-list">  
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/figurky/figurky_pes.png" alt="Pes" />            
-                    <div class="text-content">
-                      Pes     
-                    </div>        
-                  </div>        
-                </a></li> 
-                <li><a href="#" class="scrollup">        
-                  <div class="picture">            
-                    <img src="img/figurky/figurky_lienka.png" alt="Lienka" />            
-                    <div class="text-content">
-                      Lienka    
-                    </div>        
-                  </div>         
-                </a></li>  
-                <li><a href="#" class="scrollup">        
-                  <div class="picture">            
-                    <img src="img/figurky/figurky_ruze.png" alt="Ruže" />            
+                    <img src="img/figurky/figurky_ruze.png" alt="Ruže" width="145px" height="145px">            
                     <div class="text-content">
                       Ruže    
                     </div>        
@@ -136,7 +139,23 @@
                 </a></li>       
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/figurky/figurky_slon.png" alt="Slon" />            
+                    <img src="img/figurky/figurky_pes.png" alt="Pes" width="145px" height="145px">            
+                    <div class="text-content">
+                      Pes     
+                    </div>        
+                  </div>        
+                </a></li> 
+                <li><a href="#" class="scrollup">        
+                  <div class="picture">            
+                    <img src="img/figurky/figurky_lienka.png" alt="Lienka" width="145px" height="145px">            
+                    <div class="text-content">
+                      Lienka    
+                    </div>        
+                  </div>         
+                </a></li>        
+                <li><a href="#" class="scrollup">        
+                  <div class="picture">            
+                    <img src="img/figurky/figurky_slon.png" alt="Slon" width="145px" height="145px">            
                     <div class="text-content">
                       Slon    
                     </div>        
@@ -144,7 +163,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/figurky/figurky_jablcko.png" alt="Červík v jabĺčku" />            
+                    <img src="img/figurky/figurky_jablcko.png" alt="Červík v jabĺčku" width="145px" height="145px">            
                     <div class="text-content">
                       Červík v jabĺčku    
                     </div>        
@@ -152,7 +171,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/figurky/figurky_zaba.png" alt="Žaba" />            
+                    <img src="img/figurky/figurky_zaba.png" alt="Žaba" width="145px" height="145px">            
                     <div class="text-content">
                       Žaba    
                     </div>        
@@ -160,7 +179,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/figurky/figurky_tucniak.png" alt="Tučniak" />            
+                    <img src="img/figurky/figurky_tucniak.png" alt="Tučniak" width="145px" height="145px">            
                     <div class="text-content">
                       Tučniak    
                     </div>        
@@ -174,7 +193,8 @@
       </div>	             	                                                  
                             
       <footer id="footer">	                                    
-        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom. Záväznosť nastáva po prijatí zálohy.</p>
+        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom.
+        <br class="listBreak" /> Záväznosť nastáva po prijatí zálohy.</p>
                                         
         <div class="text-center footLineHeight">          
           <strong>Cukráreň Viktória</strong>            
@@ -198,27 +218,6 @@
       </footer>
     
     </div>                    
-    <!-- end outerWrapper -->  
-     	                               
-    <script type="text/javascript">
-		//<![CDATA[
-		head.ready(function() {
-			$('.carousel').carousel({
-			  interval: 5000
-			})
-      $('div.picture').click( function() { 
-        var imageSRC = $('img', this).attr('src'); 
-        $("#imgExpander").attr('src', imageSRC);
-		  })
-      $('.scrollup').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 700);
-        return false;
-    });
-    });
-		//]]>	
-	</script>  
-                    
+    <!-- end outerWrapper -->      	                                                  
   </body>            
 </html>
