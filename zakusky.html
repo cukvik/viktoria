@@ -17,7 +17,26 @@
     <script type="text/javascript" src="head.min.js"></script>             
     <script type="text/javascript">
 	     head.js("ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "bootstrap.min.js");    
-    </script>                      
+    </script>  
+    <script type="text/javascript">
+  		//<![CDATA[
+  		head.ready(function() {
+  			$('.carousel').carousel({
+  			  interval: 5000
+  			})
+        $('div.picture').click( function() { 
+          var imageSRC = $('img', this).attr('src'); 
+          $("#imgExpander").attr('src', imageSRC);
+  		  })
+        $('.scrollup').click(function () {
+          $("html, body").animate({
+              scrollTop: 0
+          }, 700);
+          return false;
+        })
+      });
+  		//]]>	
+	  </script>                     
   </head>
              
   <body>	       	        	              
@@ -95,7 +114,7 @@
       </header>  
          
       <div class="row admatBottom">       
-        <img src="img/zakusky/zakusok_belgicka_coko.png" id="imgExpander" alt="Belgická čokoláda"/>	
+        <img src="img/zakusky/zakusok_belgicka_coko.png" width="400px" height="400px" id="imgExpander" alt="Belgická čokoláda">	
       </div> 
       
       <div class="container marginsCont">
@@ -112,7 +131,7 @@
               <ul class="img-list">        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/zakusok_belgicka_coko.png" alt="Belgická čokoláda" />            
+                    <img src="img/zakusky/zakusok_belgicka_coko.png" alt="Belgická čokoláda" width="145px" height="145px">            
                     <div class="text-content">
                       Belgická čokoláda     
                     </div>        
@@ -120,7 +139,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/zakusok_cookies.png" alt="Cookies" />            
+                    <img src="img/zakusky/zakusok_cookies.png" alt="Cookies" width="145px" height="145px">            
                     <div class="text-content">
                       Cookies    
                     </div>       
@@ -128,7 +147,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/zakusok_dobosovy.png" alt="Dobošový" />            
+                    <img src="img/zakusky/zakusok_dobosovy.png" alt="Dobošový" width="145px" height="145px">            
                     <div class="text-content">
                       Dobošový     
                     </div>        
@@ -136,7 +155,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_grilazovy.png" alt="Grilážový" />
+                   <img src="img/zakusky/zakusok_grilazovy.png" alt="Grilážový" width="145px" height="145px">
                     <div class="text-content">
                       Grilážový    
                     </div>        
@@ -144,7 +163,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_cheesecake_choco.png" alt="Cheesecake s čokoládou" />
+                   <img src="img/zakusky/zakusok_cheesecake_choco.png" alt="Cheesecake s čokoládou" width="145px" height="145px">
                     <div class="text-content">
                       Cheesecake s čokoládou    
                     </div>       
@@ -152,7 +171,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_malina_coko.png" alt="Malina s čokoládou" />
+                   <img src="img/zakusky/zakusok_malina_coko.png" alt="Malina s čokoládou" width="145px" height="145px">
                     <div class="text-content">
                       Malina s čokoládou    
                     </div>        
@@ -160,7 +179,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_pistaciovy.png" alt="Pistáciový" />
+                   <img src="img/zakusky/zakusok_pistaciovy.png" alt="Pistáciový" width="145px" height="145px">
                     <div class="text-content">
                       Pistáciový   
                     </div>        
@@ -168,7 +187,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                    <img src="img/zakusky/zakusok_cheesecake.png" alt="Cheesecake" />
+                    <img src="img/zakusky/zakusok_cheesecake.png" alt="Cheesecake" width="145px" height="145px">
                     <div class="text-content">
                       Cheesecake     
                     </div>        
@@ -176,7 +195,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_kuba.png" alt="Kuba" />
+                   <img src="img/zakusky/zakusok_kuba.png" alt="Kuba" width="145px" height="145px">
                     <div class="text-content">
                       Kuba    
                     </div>        
@@ -184,7 +203,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_marcipanovy.png" alt="Marcipánový" />
+                   <img src="img/zakusky/zakusok_marcipanovy.png" alt="Marcipánový" width="145px" height="145px">
                     <div class="text-content">
                       Marcipánový     
                     </div>        
@@ -192,7 +211,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_mascarpone_jahoda.png" alt="Mascarpone jahoda" />
+                   <img src="img/zakusky/zakusok_mascarpone_jahoda.png" alt="Mascarpone jahoda" width="145px" height="145px">
                     <div class="text-content">
                       Mascarpone jahoda    
                     </div>        
@@ -200,7 +219,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_mascarpone_mango.png" alt="Mascarpone mango" />
+                   <img src="img/zakusky/zakusok_mascarpone_mango.png" alt="Mascarpone mango" width="145px" height="145px">
                     <div class="text-content">
                       Mascarpone mango  
                     </div>        
@@ -208,7 +227,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_mascarpone_malina.png" alt="Mascarpone malina" />
+                   <img src="img/zakusky/zakusok_mascarpone_malina.png" alt="Mascarpone malina" width="145px" height="145px">
                     <div class="text-content">
                       Mascarpone malina    
                     </div>        
@@ -216,7 +235,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_moccachino.png" alt="Moccachino" />
+                   <img src="img/zakusky/zakusok_moccachino.png" alt="Moccachino" width="145px" height="145px">
                     <div class="text-content">
                       Moccachino     
                     </div>        
@@ -224,7 +243,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_mrkvovy.png" alt="Mrkvový" />
+                   <img src="img/zakusky/zakusok_mrkvovy.png" alt="Mrkvový" width="145px" height="145px">
                     <div class="text-content">
                       Mrkvový    
                     </div>        
@@ -232,7 +251,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_cheesecake_nugat_ovocie.png" alt="Cheesecake nugát-ovocie" />
+                   <img src="img/zakusky/zakusok_cheesecake_nugat_ovocie.png" alt="Cheesecake nugát-ovocie" width="145px" height="145px">
                     <div class="text-content">
                       Cheesecake nugát-ovocie     
                     </div>        
@@ -240,7 +259,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_orechovy.png" alt="Orechový" />
+                   <img src="img/zakusky/zakusok_orechovy.png" alt="Orechový" width="145px" height="145px">
                     <div class="text-content">
                       Orechový    
                     </div>        
@@ -248,7 +267,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_makovy.png" alt="Extra makový" />
+                   <img src="img/zakusky/zakusok_makovy.png" alt="Extra makový" width="145px" height="145px">
                     <div class="text-content">
                       Extra makový    
                     </div>        
@@ -256,7 +275,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_schwarzwaldsky.png" alt="Schwarzwaldský" />
+                   <img src="img/zakusky/zakusok_schwarzwaldsky.png" alt="Schwarzwaldský" width="145px" height="145px">
                     <div class="text-content">
                       Schwarzwaldský    
                     </div>        
@@ -264,7 +283,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_puncovy.png" alt="Punčový" />
+                   <img src="img/zakusky/zakusok_puncovy.png" alt="Punčový" width="145px" height="145px">
                     <div class="text-content">
                       Punčový    
                     </div>        
@@ -272,7 +291,7 @@
                 </a></li>                 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_sacherovy.png" alt="Sacherový" />
+                   <img src="img/zakusky/zakusok_sacherovy.png" alt="Sacherový" width="145px" height="145px">
                     <div class="text-content">
                       Sacherový    
                     </div>        
@@ -280,7 +299,7 @@
                 </a></li>                  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_mandarinkovy_coko.png" alt="Mandarinkový s čokoládou" />
+                   <img src="img/zakusky/zakusok_mandarinkovy_coko.png" alt="Mandarinkový s čokoládou" width="145px" height="145px">
                     <div class="text-content">
                       Mandarinkový s čokoládou    
                     </div>        
@@ -288,7 +307,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_tvarohovy_kivi.png" alt="Tvarohový s kivi" />
+                   <img src="img/zakusky/zakusok_tvarohovy_kivi.png" alt="Tvarohový s kivi" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohový s kivi    
                     </div>        
@@ -296,7 +315,7 @@
                 </a></li>                 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_visnovy.png" alt="Višňový" />
+                   <img src="img/zakusky/zakusok_visnovy.png" alt="Višňový" width="145px" height="145px">
                     <div class="text-content">
                       Višňový    
                     </div>        
@@ -304,7 +323,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_tvarohovy_lesna_zmes.png" alt="Tvarohový s lesnou zmesou" />
+                   <img src="img/zakusky/zakusok_tvarohovy_lesna_zmes.png" alt="Tvarohový s lesnou zmesou" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohový s lesnou zmesou    
                     </div>        
@@ -312,7 +331,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_slovan.png" alt="Slovan" />
+                   <img src="img/zakusky/zakusok_slovan.png" alt="Slovan" width="145px" height="145px">
                     <div class="text-content">
                       Slovan    
                     </div>        
@@ -320,7 +339,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_lieskovo_orechovy.png" alt="Lieskovo-orieškový" />
+                   <img src="img/zakusky/zakusok_lieskovo_orechovy.png" alt="Lieskovo-orieškový" width="145px" height="145px">
                     <div class="text-content">
                       Lieskovo-orieškový    
                     </div>        
@@ -328,7 +347,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_jogurt_malina.png" alt="Jogurtovo-malinový" />
+                   <img src="img/zakusky/zakusok_jogurt_malina.png" alt="Jogurtovo-malinový" width="145px" height="145px">
                     <div class="text-content">
                       Jogurtovo-malinový    
                     </div>        
@@ -336,7 +355,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_harlekyn.png" alt="Harlekýn" />
+                   <img src="img/zakusky/zakusok_harlekyn.png" alt="Harlekýn" width="145px" height="145px">
                     <div class="text-content">
                       Harlekýn    
                     </div>       
@@ -344,7 +363,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/zakusok_broskynovy.png" alt="Broskyňový" />
+                   <img src="img/zakusky/zakusok_broskynovy.png" alt="Broskyňový" width="145px" height="145px">
                     <div class="text-content">
                       Broskyňový    
                     </div>        
@@ -369,7 +388,7 @@
               <ul class="img-list">        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/trvanlivy_cookies.png" alt="Cookies sušienky" />            
+                    <img src="img/zakusky/trvanlivy_cookies.png" alt="Cookies sušienky" width="145px" height="145px">            
                     <div class="text-content">
                       Cookies sušienky     
                     </div>        
@@ -377,7 +396,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/trvanlivy_jablkova_strudla.png" alt="Jablková štrúdla" />            
+                    <img src="img/zakusky/trvanlivy_jablkova_strudla.png" alt="Jablková štrúdla" width="145px" height="145px">            
                     <div class="text-content">
                       Jablková štrúdla   
                     </div>        
@@ -385,7 +404,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/trvanlivy_linecke_koliesko.png" alt="Linecké koliesko" />            
+                    <img src="img/zakusky/trvanlivy_linecke_koliesko.png" alt="Linecké koliesko" width="145px" height="145px">            
                     <div class="text-content">
                       Linecké koliesko     
                     </div>        
@@ -393,7 +412,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/trvanlivy_makova_strudla.png" alt="Maková štrúdla" />
+                   <img src="img/zakusky/trvanlivy_makova_strudla.png" alt="Maková štrúdla" width="145px" height="145px">
                     <div class="text-content">
                       Maková štrúdla   
                     </div>        
@@ -401,7 +420,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/trvanlivy_medova_kocka.png" alt="Medová kocka" />
+                   <img src="img/zakusky/trvanlivy_medova_kocka.png" alt="Medová kocka" width="145px" height="145px">
                     <div class="text-content">
                       Medová kocka    
                     </div>        
@@ -409,7 +428,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/trvanlivy_tvarohova_strudla.png" alt="Tvarohová štrúdla" />
+                   <img src="img/zakusky/trvanlivy_tvarohova_strudla.png" alt="Tvarohová štrúdla" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohová štrúdla  
                     </div>        
@@ -434,7 +453,7 @@
               <ul class="img-list">        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/exkluzivny_bananova_kocka.png" alt="Banánová kocka" />            
+                    <img src="img/zakusky/exkluzivny_bananova_kocka.png" alt="Banánová kocka" width="145px" height="145px">            
                     <div class="text-content">
                       Banánová kocka     
                     </div>        
@@ -442,7 +461,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/exkluzivny_bolero_kocka.png" alt="Bolero kocka" />            
+                    <img src="img/zakusky/exkluzivny_bolero_kocka.png" alt="Bolero kocka" width="145px" height="145px">            
                     <div class="text-content">
                       Bolero kocka   
                     </div>        
@@ -450,7 +469,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_francuzsky_kremes.png" alt="Francúzsky krémeš" />
+                   <img src="img/zakusky/exkluzivny_francuzsky_kremes.png" alt="Francúzsky krémeš" width="145px" height="145px">
                     <div class="text-content">
                       Francúzsky krémeš 
                     </div>        
@@ -458,7 +477,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_dobosovy_rez.png" alt="Dobošový rez" />
+                   <img src="img/zakusky/exkluzivny_dobosovy_rez.png" alt="Dobošový rez" width="145px" height="145px">
                     <div class="text-content">
                       Dobošový rez    
                     </div>        
@@ -466,7 +485,7 @@
                 </a></li>       
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/zakusky/exkluzivny_brownie.png" alt="Brownie" />            
+                    <img src="img/zakusky/exkluzivny_brownie.png" alt="Brownie" width="145px" height="145px">            
                     <div class="text-content">
                       Brownie     
                     </div>        
@@ -474,7 +493,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_veternik_coko.png" alt="Čokoládový veterník" />
+                   <img src="img/zakusky/exkluzivny_veternik_coko.png" alt="Čokoládový veterník" width="145px" height="145px">
                     <div class="text-content">
                       Čokoládový veterník  
                     </div>        
@@ -482,7 +501,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_veternik_karamel.png" alt="Karamelový veterník" />
+                   <img src="img/zakusky/exkluzivny_veternik_karamel.png" alt="Karamelový veterník" width="145px" height="145px">
                     <div class="text-content">
                       Karamelový veterník  
                     </div>        
@@ -490,7 +509,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_gastanova_kocka.png" alt="Gaštanová kocka" />
+                   <img src="img/zakusky/exkluzivny_gastanova_kocka.png" alt="Gaštanová kocka" width="145px" height="145px">
                     <div class="text-content">
                       Gaštanová kocka 
                     </div>        
@@ -498,7 +517,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_gastanove_hniezdo.png" alt="Gaštanové hniezdo" />
+                   <img src="img/zakusky/exkluzivny_gastanove_hniezdo.png" alt="Gaštanové hniezdo" width="145px" height="145px">
                     <div class="text-content">
                       Gaštanové hniezdo 
                     </div>        
@@ -506,7 +525,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_gastanove_pyre.png" alt="Gaštanové pyré" />
+                   <img src="img/zakusky/exkluzivny_gastanove_pyre.png" alt="Gaštanové pyré" width="145px" height="145px">
                     <div class="text-content">
                       Gaštanové pyré 
                     </div>        
@@ -514,7 +533,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_panna_cotta.png" alt="Panna cotta" />
+                   <img src="img/zakusky/exkluzivny_panna_cotta.png" alt="Panna cotta" width="145px" height="145px">
                     <div class="text-content">
                       Panna cotta 
                     </div>        
@@ -522,7 +541,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_pena_coko.png" alt="Čokoládová pena" />
+                   <img src="img/zakusky/exkluzivny_pena_coko.png" alt="Čokoládová pena" width="145px" height="145px">
                     <div class="text-content">
                       Čokoládová pena 
                     </div>        
@@ -530,7 +549,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_hruskovy_kremes.png" alt="Hruškový krémeš" />
+                   <img src="img/zakusky/exkluzivny_hruskovy_kremes.png" alt="Hruškový krémeš" width="145px" height="145px">
                     <div class="text-content">
                       Hruškový krémeš 
                     </div>        
@@ -538,7 +557,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_mandarinkova_rolada.png" alt="Mandarinková roláda" />
+                   <img src="img/zakusky/exkluzivny_mandarinkova_rolada.png" alt="Mandarinková roláda" width="145px" height="145px">
                     <div class="text-content">
                       Mandarinková roláda
                     </div>        
@@ -546,7 +565,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_kardinalov_rez.png" alt="Kardinálov rez" />
+                   <img src="img/zakusky/exkluzivny_kardinalov_rez.png" alt="Kardinálov rez" width="145px" height="145px">
                     <div class="text-content">
                       Kardinálov rez
                     </div>        
@@ -554,7 +573,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_kavove_zrno.png" alt="Kávové zrno" />
+                   <img src="img/zakusky/exkluzivny_kavove_zrno.png" alt="Kávové zrno" width="145px" height="145px">
                     <div class="text-content">
                       Kávové zrno
                     </div>        
@@ -562,7 +581,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_kokosova_lahodka.png" alt="Kokosová lahôdka" />
+                   <img src="img/zakusky/exkluzivny_kokosova_lahodka.png" alt="Kokosová lahôdka" width="145px" height="145px">
                     <div class="text-content">
                       Kokosová lahôdka
                     </div>        
@@ -570,7 +589,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_kokosove_gulky.png" alt="Kokosové guľky" />
+                   <img src="img/zakusky/exkluzivny_kokosove_gulky.png" alt="Kokosové guľky" width="145px" height="145px">
                     <div class="text-content">
                       Kokosové guľky
                     </div>        
@@ -578,7 +597,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_laskonka.png" alt="Laskonka" />
+                   <img src="img/zakusky/exkluzivny_laskonka.png" alt="Laskonka" width="145px" height="145px">
                     <div class="text-content">
                       Laskonka
                     </div>        
@@ -586,7 +605,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_likerovy_pohar.png" alt="Likérový pohár" />
+                   <img src="img/zakusky/exkluzivny_likerovy_pohar.png" alt="Likérový pohár" width="145px" height="145px">
                     <div class="text-content">
                       Likérový pohár
                     </div>        
@@ -594,7 +613,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_likerovy_spic.png" alt="Likérový špic" />
+                   <img src="img/zakusky/exkluzivny_likerovy_spic.png" alt="Likérový špic" width="145px" height="145px">
                     <div class="text-content">
                       Likérový špic
                     </div>        
@@ -602,7 +621,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_marcipanova_bomba.png" alt="Marcipánová bomba" />
+                   <img src="img/zakusky/exkluzivny_marcipanova_bomba.png" alt="Marcipánová bomba" width="145px" height="145px">
                     <div class="text-content">
                       Marcipánová bomba
                     </div>        
@@ -610,7 +629,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_martinska_rolada.png" alt="Martinská roláda" />
+                   <img src="img/zakusky/exkluzivny_martinska_rolada.png" alt="Martinská roláda" width="145px" height="145px">
                     <div class="text-content">
                       Martinská roláda
                     </div>        
@@ -618,7 +637,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_karamel_nero.png" alt="Nero karamel" />
+                   <img src="img/zakusky/exkluzivny_karamel_nero.png" alt="Nero karamel" width="145px" height="145px">
                     <div class="text-content">
                       Nero karamel
                     </div>        
@@ -626,7 +645,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_tartaletka_ovocie.png" alt="Ovocná tartaletka" />
+                   <img src="img/zakusky/exkluzivny_tartaletka_ovocie.png" alt="Ovocná tartaletka" width="145px" height="145px">
                     <div class="text-content">
                       Ovocná tartaletka
                     </div>        
@@ -634,7 +653,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_tvaroh_ovocie_kocka.png" alt="Tvarohovo-ovocná kocka" />
+                   <img src="img/zakusky/exkluzivny_tvaroh_ovocie_kocka.png" alt="Tvarohovo-ovocná kocka" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohovo-ovocná kocka
                     </div>        
@@ -642,7 +661,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_penove_jablko.png" alt="Penové jablko" />
+                   <img src="img/zakusky/exkluzivny_penove_jablko.png" alt="Penové jablko" width="145px" height="145px">
                     <div class="text-content">
                       Penové jablko
                     </div>       
@@ -650,7 +669,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_puncovy_rez.png" alt="Punčový rez" />
+                   <img src="img/zakusky/exkluzivny_puncovy_rez.png" alt="Punčový rez" width="145px" height="145px">
                     <div class="text-content">
                       Punčový rez
                     </div>        
@@ -658,7 +677,7 @@
                 </a></li> 
                   <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_tiramisu.png" alt="Tiramisu" />
+                   <img src="img/zakusky/exkluzivny_tiramisu.png" alt="Tiramisu" width="145px" height="145px">
                     <div class="text-content">
                       Tiramisu
                     </div>        
@@ -666,7 +685,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_tvaroh_torticka.png" alt="Tvarohová tortička" />
+                   <img src="img/zakusky/exkluzivny_tvaroh_torticka.png" alt="Tvarohová tortička" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohová tortička
                     </div>        
@@ -674,7 +693,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_venceky.png" alt="Venčeky" />
+                   <img src="img/zakusky/exkluzivny_venceky.png" alt="Venčeky" width="145px" height="145px">
                     <div class="text-content">
                       Venčeky
                     </div>        
@@ -682,7 +701,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_biely_mousse.png" alt="Biely mousse" />
+                   <img src="img/zakusky/exkluzivny_biely_mousse.png" alt="Biely mousse" width="145px" height="145px">
                     <div class="text-content">
                       Biely mousse
                     </div>        
@@ -690,7 +709,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_samrola.png" alt="Šamrola" />
+                   <img src="img/zakusky/exkluzivny_samrola.png" alt="Šamrola" width="145px" height="145px">
                     <div class="text-content">
                       Šamrola
                     </div>        
@@ -698,7 +717,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_banan_muffin.png" alt="Banánový muffin" />
+                   <img src="img/zakusky/exkluzivny_banan_muffin.png" alt="Banánový muffin" width="145px" height="145px">
                     <div class="text-content">
                       Banánový muffin
                     </div>        
@@ -706,7 +725,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_visna_coko_muffin.png" alt="Čokoládovo-višňový muffin" />
+                   <img src="img/zakusky/exkluzivny_visna_coko_muffin.png" alt="Čokoládovo-višňový muffin" width="145px" height="145px">
                     <div class="text-content">
                       Čokoládovo-višňový muffin
                     </div>        
@@ -714,7 +733,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_orech_kosicek.png" alt="Orechový košíček" />
+                   <img src="img/zakusky/exkluzivny_orech_kosicek.png" alt="Orechový košíček" width="145px" height="145px">
                     <div class="text-content">
                       Orechový košíček
                     </div>        
@@ -722,7 +741,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_pistacia_sarlota.png" alt="Pistáciová šarlota" />
+                   <img src="img/zakusky/exkluzivny_pistacia_sarlota.png" alt="Pistáciová šarlota" width="145px" height="145px">
                     <div class="text-content">
                       Pistáciová šarlota
                     </div>        
@@ -730,7 +749,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_jogurtova_kocka.png" alt="Jogurtová kocka" />
+                   <img src="img/zakusky/exkluzivny_jogurtova_kocka.png" alt="Jogurtová kocka" width="145px" height="145px">
                     <div class="text-content">
                       Jogurtová kocka
                     </div>        
@@ -738,7 +757,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">                       
                   <div class="picture"> 
-                   <img src="img/zakusky/exkluzivny_linecke_rozky.png" alt="Linecké rožky" />
+                   <img src="img/zakusky/exkluzivny_linecke_rozky.png" alt="Linecké rožky" width="145px" height="145px">
                     <div class="text-content">
                       Linecké rožky
                     </div>        
@@ -752,7 +771,8 @@
       </div>    
                  	           
       <footer id="footer">	                                    
-        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom. Záväznosť nastáva po prijatí zálohy.</p>
+        <p class="navFooter">Objednávky prijímame osobne, telefonicky alebo e-mailom.
+        <br class="listBreak" /> Záväznosť nastáva po prijatí zálohy.</p>
                                            
         <div class="text-center footLineHeight">          
           <strong>Cukráreň Viktória</strong>            
@@ -776,27 +796,6 @@
       </footer>
     
     </div>                    
-    <!-- end outerWrapper -->  
-     	                               
-    <script type="text/javascript">
-		//<![CDATA[
-		head.ready(function() {
-			$('.carousel').carousel({
-			  interval: 5000
-			})
-      $('div.picture').click( function() { 
-        var imageSRC = $('img', this).attr('src'); 
-        $("#imgExpander").attr('src', imageSRC);
-		  })
-      $('.scrollup').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 700);
-        return false;
-    });
-    });
-		//]]>	
-	</script>  
-                    
+    <!-- end outerWrapper -->          
   </body>            
 </html>

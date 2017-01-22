@@ -7,18 +7,19 @@
 }
 
 .admatBottom {
-	margin-bottom:10px;
+	margin-bottom: 10px;
   background-image: url("img/global/header.jpg");
 }
 
 #myCarousel {
-  position:relative;
+  position: relative;
 }
 
 #imgExpander {
-  max-width:100%; 
-  display:block; 
-  margin:0 auto;
+  max-width: 100%; 
+  height: auto;
+  display: block; 
+  margin: 0 auto;
 }
 
 .justifyPara {
@@ -139,8 +140,8 @@
 }
 
 .cakes .img-list img {
-  width: 145px;
-  height: 145px;
+  max-width: 100%;
+  height: auto;
 }
 
 .events .img-list img {
@@ -362,7 +363,7 @@ span.tagline {
 	color:#9B7E69;
   font-weight: 600;
 	line-height: inherit;
-	font-size:1.3em;
+  font-size: 1.3em;
   letter-spacing: .19em;
 }
 
@@ -521,6 +522,7 @@ a.siteBy {
 		padding-bottom:5px;
 		padding-left:0;
     font-size: 15px;
+    letter-spacing: 0.05em;
 	}
 	.navFooter li {margin-bottom:5px;}
 
