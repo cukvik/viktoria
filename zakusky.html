@@ -25,8 +25,12 @@
   			  interval: 5000
   			})
         $('div.picture').click( function() { 
-          var imageSRC = $('img', this).attr('src').replace("_small.png", ".png");
-          $("#imgExpander").attr('src', imageSRC);
+          // replace image on the top for the small one first (for slower internet connection)
+          var smallimageSRC = $('img', this).attr('src');
+          $("#imgExpander").attr('src', smallimageSRC);
+          // now load the image in bigger resolution
+          var newimageSRC = smallimageSRC.replace("_small.png", ".png");
+          $("#imgExpander").attr('src', newimageSRC);
   		  })
         $('.scrollup').click(function () {
           $("html, body").animate({
