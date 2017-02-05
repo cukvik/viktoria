@@ -25,8 +25,12 @@
   			  interval: 5000
   			})
         $('div.picture').click( function() { 
-          var imageSRC = $('img', this).attr('src'); 
-          $("#imgExpander").attr('src', imageSRC);
+          // replace image on the top for the small one first (for slower internet connection)
+          var smallimageSRC = $('img', this).attr('src');
+          $("#imgExpander").attr('src', smallimageSRC);
+          // now load the image in bigger resolution
+          var newimageSRC = smallimageSRC.replace("_small.png", ".png");
+          $("#imgExpander").attr('src', newimageSRC);
   		  })
         $('.scrollup').click(function () {
           $("html, body").animate({
@@ -131,7 +135,7 @@
               <ul class="img-list">        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/torty/torta_belgicka_coko.png" alt="Belgická čokoláda" width="145px" height="145px">            
+                    <img src="img/torty/torta_belgicka_coko_small.png" alt="Belgická čokoláda" width="145px" height="145px">            
                     <div class="text-content">
                       Belgická čokoláda     
                     </div>        
@@ -139,7 +143,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/torty/torta_cookies.png" alt="Cookies" width="145px" height="145px">            
+                    <img src="img/torty/torta_cookies_small.png" alt="Cookies" width="145px" height="145px">            
                     <div class="text-content">
                       Cookies     
                     </div>        
@@ -147,7 +151,7 @@
                 </a></li>        
                 <li><a href="#" class="scrollup">        
                   <div class="picture">            
-                    <img src="img/torty/torta_dobosova.png" alt="Dobošová" width="145px" height="145px">            
+                    <img src="img/torty/torta_dobosova_small.png" alt="Dobošová" width="145px" height="145px">            
                     <div class="text-content">
                       Dobošová    
                     </div>        
@@ -155,7 +159,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_grilazova.png" alt="Grilážová" width="145px" height="145px">
+                   <img src="img/torty/torta_grilazova_small.png" alt="Grilážová" width="145px" height="145px">
                     <div class="text-content">
                       Grilážová   
                     </div>        
@@ -163,7 +167,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_cheesecake_coko.png" alt="Cheesecake s čokoládou" width="145px" height="145px">
+                   <img src="img/torty/torta_cheesecake_coko_small.png" alt="Cheesecake s čokoládou" width="145px" height="145px">
                     <div class="text-content">
                       Cheesecake s čokoládou  
                     </div>        
@@ -171,7 +175,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_cheesecake_nugat_ovocie.png" alt="Cheesecake nugát-ovocie" width="145px" height="145px">
+                   <img src="img/torty/torta_cheesecake_nugat_ovocie_small.png" alt="Cheesecake nugát-ovocie" width="145px" height="145px">
                     <div class="text-content">
                       Cheesecake nugát-ovocie     
                     </div>        
@@ -179,7 +183,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                    <img src="img/torty/torta_kuba.png" alt="Kuba" width="145px" height="145px">
+                    <img src="img/torty/torta_kuba_small.png" alt="Kuba" width="145px" height="145px">
                     <div class="text-content">
                       Kuba     
                     </div>        
@@ -187,7 +191,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_makova_extra.png" alt="Extra maková" width="145px" height="145px">
+                   <img src="img/torty/torta_makova_extra_small.png" alt="Extra maková" width="145px" height="145px">
                     <div class="text-content">
                       Extra maková     
                     </div>        
@@ -195,7 +199,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_malina_coko.png" alt="Malina s čokoládou" width="145px" height="145px">
+                   <img src="img/torty/torta_malina_coko_small.png" alt="Malina s čokoládou" width="145px" height="145px">
                     <div class="text-content">
                       Malina s čokoládou     
                     </div>        
@@ -203,7 +207,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_marcipanova.png" alt="Marcipánová" width="145px" height="145px">
+                   <img src="img/torty/torta_marcipanova_small.png" alt="Marcipánová" width="145px" height="145px">
                     <div class="text-content">
                       Marcipánová    
                     </div>        
@@ -211,7 +215,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_mascarpone_malina.png" alt="Mascarpone malina" width="145px" height="145px">
+                   <img src="img/torty/torta_mascarpone_malina_small.png" alt="Mascarpone malina" width="145px" height="145px">
                     <div class="text-content">
                       Mascarpone malina    
                     </div>        
@@ -219,7 +223,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">           
                   <div class="picture"> 
-                   <img src="img/torty/torta_mascarpone_jahoda.png" alt="Mascarpone jahoda" width="145px" height="145px">
+                   <img src="img/torty/torta_mascarpone_jahoda_small.png" alt="Mascarpone jahoda" width="145px" height="145px">
                     <div class="text-content">
                       Mascarpone jahoda    
                     </div>        
@@ -227,7 +231,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_mascarpone_mango.png" alt="Mascarpone mango" width="145px" height="145px">
+                   <img src="img/torty/torta_mascarpone_mango_small.png" alt="Mascarpone mango" width="145px" height="145px">
                     <div class="text-content">
                       Mascarpone mango    
                     </div>        
@@ -235,7 +239,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_moccachino.png" alt="Moccachino" width="145px" height="145px">
+                   <img src="img/torty/torta_moccachino_small.png" alt="Moccachino" width="145px" height="145px">
                     <div class="text-content">
                       Moccachino     
                     </div>        
@@ -243,7 +247,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_orechova.png" alt="Orechová" width="145px" height="145px">
+                   <img src="img/torty/torta_orechova_small.png" alt="Orechová" width="145px" height="145px">
                     <div class="text-content">
                       Orechová    
                     </div>        
@@ -251,7 +255,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_puncova.png" alt="Punčová" width="145px" height="145px">
+                   <img src="img/torty/torta_puncova_small.png" alt="Punčová" width="145px" height="145px">
                     <div class="text-content">
                       Punčová     
                     </div>        
@@ -259,7 +263,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_raw_coko.png" alt="Raw čokoláda" width="145px" height="145px">
+                   <img src="img/torty/torta_raw_coko_small.png" alt="Raw čokoláda" width="145px" height="145px">
                     <div class="text-content">
                       Raw čokoláda    
                     </div>        
@@ -267,7 +271,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">           
                   <div class="picture"> 
-                   <img src="img/torty/torta_broskynova.png" alt="Broskyňová" width="145px" height="145px">
+                   <img src="img/torty/torta_broskynova_small.png" alt="Broskyňová" width="145px" height="145px">
                     <div class="text-content">
                       Broskyňová   
                     </div>        
@@ -275,7 +279,7 @@
                 </a></li> 
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_mandarinkova_coko.png" alt="Mandarinková s čokoládou" width="145px" height="145px">
+                   <img src="img/torty/torta_mandarinkova_coko_small.png" alt="Mandarinková s čokoládou" width="145px" height="145px">
                     <div class="text-content">
                       Mandarinková s čokoládou   
                     </div>        
@@ -283,7 +287,7 @@
                 </a></li>                  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_schwarzwaldska.png" alt="Schwarzwaldská" width="145px" height="145px">
+                   <img src="img/torty/torta_schwarzwaldska_small.png" alt="Schwarzwaldská" width="145px" height="145px">
                     <div class="text-content">
                       Schwarzwaldská     
                     </div>        
@@ -291,7 +295,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_tvarohova_kivi.png" alt="Tvarohová s kivi" width="145px" height="145px">
+                   <img src="img/torty/torta_tvarohova_kivi_small.png" alt="Tvarohová s kivi" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohová s kivi    
                     </div>        
@@ -299,7 +303,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_sacherova.png" alt="Sacherová" width="145px" height="145px">
+                   <img src="img/torty/torta_sacherova_small.png" alt="Sacherová" width="145px" height="145px">
                     <div class="text-content">
                       Sacherová    
                     </div>        
@@ -307,7 +311,7 @@
                 </a></li>                  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_tvarohova_lesna_zmes.png" alt="Tvarohová s lesnou zmesou" width="145px" height="145px">
+                   <img src="img/torty/torta_tvarohova_lesna_zmes_small.png" alt="Tvarohová s lesnou zmesou" width="145px" height="145px">
                     <div class="text-content">
                       Tvarohová s lesnou zmesou    
                     </div>        
@@ -315,7 +319,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">           
                   <div class="picture"> 
-                   <img src="img/torty/torta_visnova.png" alt="Višňová" width="145px" height="145px">
+                   <img src="img/torty/torta_visnova_small.png" alt="Višňová" width="145px" height="145px">
                     <div class="text-content">
                       Višňová    
                     </div>        
@@ -323,7 +327,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_jogurt_malina.png" alt="Jogurtovo-malinová" width="145px" height="145px">
+                   <img src="img/torty/torta_jogurt_malina_small.png" alt="Jogurtovo-malinová" width="145px" height="145px">
                     <div class="text-content">
                       Jogurtovo-malinová    
                     </div>        
@@ -331,7 +335,7 @@
                 </a></li>
                 <li><a href="#" class="scrollup">           
                   <div class="picture"> 
-                   <img src="img/torty/torta_lieskovo_orechova.png" alt="Lieskovo-oriešková" width="145px" height="145px">
+                   <img src="img/torty/torta_lieskovo_orechova_small.png" alt="Lieskovo-oriešková" width="145px" height="145px">
                     <div class="text-content">
                       Lieskovo-oriešková    
                     </div>        
@@ -339,7 +343,7 @@
                 </a></li>  
                 <li><a href="#" class="scrollup">        
                   <div class="picture"> 
-                   <img src="img/torty/torta_pistaciova.png" alt="Pistáciová" width="145px" height="145px">
+                   <img src="img/torty/torta_pistaciova_small.png" alt="Pistáciová" width="145px" height="145px">
                     <div class="text-content">
                       Pistáciová    
                     </div>        
