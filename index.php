@@ -26,7 +26,8 @@
   			})
   		});
   		//]]>
-	  </script>                       
+	  </script>  
+	  <?php include "count.php"; ?>
   </head>
              
   <body>	       	        	              
