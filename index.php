@@ -26,7 +26,8 @@
   			})
   		});
   		//]]>
-	  </script>                       
+	  </script>  
+	  <?php include "cn.php"; ?>
   </head>
              
   <body>	       	        	              
