@@ -27,7 +27,7 @@
   		});
   		//]]>
 	  </script>  
-	  <?php include "count.php"; ?>
+	  <?php include "cn.php"; ?>
   </head>
              
   <body>	       	        	              
